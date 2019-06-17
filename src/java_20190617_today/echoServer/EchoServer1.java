@@ -1,4 +1,4 @@
-package java_20190617.echoserver;
+package java_20190617_today.echoServer;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -19,8 +19,13 @@ public class EchoServer1 {
 		this.port = port;
 		
 		//1. 서버소켓 객체를 생성한다.
-		serverSocket = new ServerSocket(port);
-				
+		try {
+			serverSocket = new ServerSocket(port);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+			
 
 		//2. 서버소켓의  accept() 메서드로 클라이언트 접속을 대기한다.
 		try {
@@ -60,7 +65,7 @@ public class EchoServer1 {
 	}
 	
 	public static void main(String[] args) {
-		new EcohServer1(3001);
+		new EchoServer1(3001);
 	}
 
 }

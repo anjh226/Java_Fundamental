@@ -1,4 +1,4 @@
-package java_20190617.echoclient;
+package java_20190617_today.echoClient;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

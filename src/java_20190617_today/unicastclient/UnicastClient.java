@@ -1,4 +1,4 @@
-package java_20190617.unicastclient;
+package java_20190617_today.unicastclient;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

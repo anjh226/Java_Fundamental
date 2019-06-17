@@ -1,10 +1,11 @@
-package java_20190617.echoclient;
+package java_20190617_today.echoClient;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -25,6 +26,7 @@ public class EchoClient1 {
 		socket = new Socket(ip, port);
 		
 		//6-1.
+		OutputStream out = socket.getOutputStream();
 		OutputStreamWriter osw = new OutputStreamWriter(out);
 		BufferedWriter bw = new BufferedWriter(osw);
 		bw.write("æ»≥Á«œººø‰"); 
@@ -44,7 +46,7 @@ public class EchoClient1 {
 			e.printStackTrace();
 		}
 	}
-	}
+
 	
 	
 	public static void main(String[] args) {

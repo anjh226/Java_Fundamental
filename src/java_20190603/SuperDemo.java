@@ -1,8 +1,7 @@
 package java_20190603;
-  
-improt java.lang.*;
+import java.lang.*;
 
-class A extends Object {
+class A {
 
 A(){
 

@@ -7,6 +7,7 @@ import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.sl.usermodel.Sheet;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -44,7 +45,7 @@ public class CoinMarketDemo {
 		Element temp = value2.get(i);
 		System.out.println(temp.text());
 		
-		HSSFRow row = sheet.createRow(i); // 엑셀의 행은 0번부터 시작
+		HSSFRow row = set.createRow(i); // 엑셀의 행은 0번부터 시작
 		HSSFCell cell = row.createCell(0); // 행의 셀은 0번부터 시작
 		cell.setCellValue(temp.text()); //생성한 셀에 데이터 삽입
 		

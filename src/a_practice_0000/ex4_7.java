@@ -21,10 +21,11 @@ public class ex4_7 {
 		if (result == 2 || result == -1 ) {
 			System.out.println("당신이 승리했습니다");
 		} 
-		if (result == 1 || result == - ) {
+		if (result == 1 || result == -2 ) {
 			System.out.println("당신이 승리했습니다");
 		}
 		
+		// 작성중
 		
 	}
 }

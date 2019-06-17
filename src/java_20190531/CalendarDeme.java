@@ -7,7 +7,8 @@ import java.io.InputStreamReader;
 public class CalendarDeme {
 	// 키보드로 입력받은 한 줄을 반환하는 함수
 	public static String console() throws IOException{ // 오류1 괄호 쌍 
-		BufferedReader br = new BufferedReader (new InputStreamReader(System.in)); // 오류2 new 누락
+		BufferedReader br = new BufferedReader (
+				new InputStreamReader(System.in)); // 오류2 new 누락
 		return br.readLine();
 	}
 
@@ -26,7 +27,7 @@ public class CalendarDeme {
 			
 			if (data.length == 1){
 				int year = Integer.parseInt(data[0]);
-				c.print(year, year);
+				c.print(year);
 				
 			}else if (data.length == 2){
 				int year = Integer.parseInt(data[0]);
@@ -40,8 +41,5 @@ public class CalendarDeme {
 				c.print(year, month, day);
 			} // 위 경우 외에 입력시 그냥 죽이자. else 생략
 		}
-	
-	
-		
 	}	
 }

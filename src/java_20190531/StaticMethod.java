@@ -16,8 +16,8 @@ public class StaticMethod {
 		
 	public static void m3(){ // static 메소드
 		name = "국민은행";
-		age = 10; // instance 변수 접근 불가
-		m2(); // instance 메소드 호출 불가
+		// age = 10; // instance 변수 접근 불가
+		// m2(); // instance 메소드 호출 불가
 		m4();
 	}
 	public static void m4(){
@@ -27,14 +27,11 @@ public class StaticMethod {
 	// 인스턴스 메소드, 변수를 호출하기 위해 객체를 생성해 왔던 것. 
 	public static void main(String[] args){
 		StaticMethod.m4(); // static 변수는 클래스 이름. 을 붙여서 호출 해야 함. 
-		m2();
+		StaticMethod.name = "신한은행";
 		
-		name = "이름";
-		age = "1000";
-		
-
-		
-		
+		StaticMethod sm = new StaticMethod();
+		sm.age = 10;
+		sm.m1();
+		sm.m2();
 	}
-		
 }

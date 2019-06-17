@@ -54,7 +54,7 @@ public class Calendar {
 	}
 
 	
-	private void print(int year) {
+	public void print(int year) {
 		// TODO Auto-generated method stub	
 		
 		System.out.println(year+"달력입니다.");
@@ -63,7 +63,7 @@ public class Calendar {
 		}
 	}
 	
-	private void print(int year, int month) {
+	public void print(int year, int month) {
 		// TODO Auto-generated method stub
 		System.out.println(year + "년 " + month + "월 달력 입니다.");
 		System.out.println("일\t월\t화\t수\t목\t금\t토");
@@ -83,11 +83,11 @@ public class Calendar {
 				System.out.println();
 			}
 		}
-		System.out.print();
+		System.out.println();
 
 	}
 
-	private void print(int year, int month, int day) {
+	public void print(int year, int month, int day) {
 		// TODO Auto-generated method stub
 
 		// 중복되는 코드 상단에서 totalCnt 메소드 설정 한 후, 일 수 합을 구하는 중복하는 코드를 삭제함.

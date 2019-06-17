@@ -3,6 +3,7 @@ package java_20190614;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
@@ -21,16 +22,16 @@ public class CoinCrawling {
 	// OOO -> 한국식 날짜 포맷으로 변경
 	private String getKoreanDate(String Date){
 		String KoreanDate = null;
-		SimpleDateFormet from = new SimpleDateFormet("MMM dd, yyyy", Locale.US); // M => 2 MM => 02 MMM => 영문표기
-		SimpleDateFormat to = new SimpleDateFormet("yyyy년 MM월 DD일", Locale.KOREAN);
+		SimpleDateFormat from = new SimpleDateFormat("MMM dd, yyyy", Locale.US); // M => 2 MM => 02 MMM => 영문표기
+		SimpleDateFormat to = new SimpleDateFormat("yyyy년 MM월 DD일", Locale.KOREAN);
 		
 		try {
-			Date d = from.parse(date); // java.utll.Date() --> 라이브러리 import 대신 OO.패키지명.OO 도 가능
-			KoreanDate = to.formet(d);
+			Date d = from.parse(Date); // java.utll.Date() --> 라이브러리 import 대신 OO.패키지명.OO 도 가능
+			KoreanDate = to.format(d);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		return koreanDate();
+		return KoreanDate;
 		
 	}
 	
@@ -85,7 +86,7 @@ public class CoinCrawling {
 			
 			
 			String volume = e.child(5).text();
-			volum = volum.replaceAll(",", "");//콤마 제거 replaceAll() 활용
+			volume = volume.replaceAll(",", "");//콤마 제거 replaceAll() 활용
 			cell = row.createCell(5); // 행의 셀은 0번부터 시작
 		    cell.setCellValue(Long.parseLong(volume)); //생성한 셀에 데이터 삽입
 			
@@ -157,10 +158,10 @@ public class CoinCrawling {
 	}
 	
 	public static void main (String[] args){
-		CoinCrwaling_Upgrade c = new CoinCrwaling_Upgrade();
-		c.excute("비트코인", "bitcoin", "20190610", "20190618");
-		c.excute("이더리움", "", "20180613", "20190618");
-		c.excute("리플", "bitcoin", "20180613", "20190618");
+		CoinMarketCapCrawling_Upgrade c = new CoinMarketCapCrawling_Upgrade();
+		c.execute("비트코인", "bitcoin", "20190610", "20190618");
+		c.execute("이더리움", "", "20180613", "20190618");
+		c.execute("리플", "bitcoin", "20180613", "20190618");
 		
 		
 	}

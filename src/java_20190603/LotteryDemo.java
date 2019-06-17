@@ -13,7 +13,7 @@ public class LotteryDemo {
 			}
 			
 			public static void main (String[] args) throws IOException {
-				Loterry lottery = new Lottery();						
+				Lottery lottery = new Lottery();						
 				
 				while(true){
 					System.out.print("로또 복권 개수를 입력하세요>");
@@ -23,25 +23,6 @@ public class LotteryDemo {
 					lottery.print(count);						
 				}
 				
-				//
-				
-				if (data.length == 1){
-							
-				}
-				else if (data.length == 2){	
-				
-				}
-				else if (data.length == 3){	
-				
-				}
-				else if (data.length == 4){	
-				
-				}
-				else if (data.length == 5){
-					
-				} else
-			
-					
 					
 					
 					

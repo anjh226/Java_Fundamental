@@ -13,9 +13,9 @@ public class GenericDemo {
 		list.add("1");
 		list.add("2");
 		list.add("3");
-		list.add(10); // <- int는 못 들어감.boxing 되서 int Class로 들어가는 것.
+//		list.add(10); // <- int는 못 들어감.boxing 되서 int Class로 들어가는 것.
 		
-	for (int i =0; i < list.size; i++){
+	for (int i =0; i < list.size(); i++){
 		
 	}
 		

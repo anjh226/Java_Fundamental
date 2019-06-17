@@ -17,7 +17,7 @@ public class practice_0603 {
 		int countPrime =0;
 		int sumPrime = 0;
 		
-		for (a=2; a<=100; a++) {
+		for (int a = 2; a<=100; a++) {
 		
 		}
 			
